@@ -2,12 +2,61 @@
     <head>
         <title>Dear Digital</title>
         <link href="main.css" rel="stylesheet"></link>
+
+        <!-- 04-08-2021 Commit -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+          //accordion script
+          $(document).ready(function(){
+            // var acc = document.getElementsByClassName("accordion");
+            // var i;
+            //
+            // for (i = 0; i < acc.length; i++) {
+            //   acc[i].addEventListener("click", function() {
+            //     $(this).toggleClass("accordion-active");
+            //     // this.classList.toggle("accordion-active");
+            //     var panel = this.nextElementSibling;
+            //     if (panel.style.maxHeight) {
+            //       panel.style.maxHeight = null;
+            //     } else {
+            //       panel.style.maxHeight = panel.scrollHeight + "px";
+            //     }
+            //   });
+            // }
+
+            $(".accordion").click(function() {
+              console.log("clicked");
+              var acc1 = $(this).hasClass('accordion-active')
+              console.log(acc1);
+              $(".accordion").each(function() {
+                $(this).removeClass("accordion-active");
+                var panel1 = $(this).next()[0];
+                console.log(panel1);
+                panel1.classList.remove("panel-max");
+              });
+              if(acc1) {
+                $(this).removeClass("accordion-active")
+                var panel2 = $(this).next()[0];
+                console.log(panel2);
+                panel2.classList.remove("panel-max");
+              }
+              else {
+                $(this).addClass("accordion-active")
+                var panel3 = $(this).next()[0];
+                console.log(panel3);
+                panel3.classList.add("panel-max");
+              }
+            });
+        });
+        </script>
+        <!-- 04-08-2021 Commit -->
     </head>
     <body>
+      <!-- 03-08-2021 Commit -->
       <header class="header">
         <div class="header-wrapper">
           <nav class="left-nav no-t-m">
-            <a href="/"><img src="Assets/Header-Logo.svg" alt="Header Logo" /></a>
+            <a href="/"><img src="assets/icons/Header-Logo.svg" alt="Header Logo" /></a>
           </nav>
           <nav class="right-nav no-t-m">
             <ul class="header-nav-list header-nav-list-small">
@@ -15,7 +64,7 @@
               <li class="no-m"><a href="/pages/work">Work</a></li>
               <li class="no-m"><a href="/pages/about">About</a></li>
               <li class="no-m"><a href="/pages/blog">Blog</a></li>
-              <li><a href="#" class="no-m" onClick="return false;"><img src="Assets/cart.jpg" alt="cart icon"><span class="cart-item-count">15</span></a></li>
+              <li><a href="#" class="no-m" onClick="return false;"><img src="assets/imgs/cart.jpg" alt="cart icon"><span class="cart-item-count">15</span></a></li>
               <li><button class="no-m">Contact us<span class="pink-dot">.</span></button></a></li>
             </ul>
           </nav>
@@ -23,9 +72,118 @@
       </header>
 
       <div class="hero hero-homepage">
-        <div class="container flex-box">
+        <div class="container flex-box-1">
           <div class="flex-center">
             <h1 class="hero-heading">Your e-commerce partner <br> who really understands <br> your business<span class="pink-dot">.</span></h1>
+          </div>
+          <!-- 04-08-2021 Commit -->
+          <div class="explore-link">
+            <div class="">
+              <a href="#">Let's explore <img src="assets/icons/round-button.svg" alt="explore button"></a>
+            </div>
+          </div>
+        </div>
+        <section class="services-section flex-box-1">
+          <a href="#" class="services-block">
+            <div class="flex-box-1 flex-column justify-center align-center">
+              <h2 class="services-heading"><span class="bullets-pts">01.</span>E-commerce Sales <img src="assets/icons/right-arrow.svg" alt="right arrow"></h2>
+              <p class="services-text">Accelerating your e-commerce <br> business growth?</p>
+            </div>
+          </a>
+          <a href="#" class="services-block">
+            <div class="flex-box-1 flex-column justify-center align-center">
+              <h2 class="services-heading"><span class="bullets-pts">02.</span>E-commerce Development <img src="assets/icons/right-arrow.svg" alt="right arrow"></h2>
+              <p class="services-text">Want to build a high-performing <br> e-commerce brand?</p>
+            </div>
+          </a>
+        </section>
+        <!-- 04-08-2021 Commit -->
+      </div>
+
+      <!-- 04-08-2021 Commit -->
+      <div class="blue-background">
+        <div class="container">
+          <div class="row middle-section">
+            <div class="col-txt-1 t-m-order-2">
+              <span class="dear-digital-text">dear digital</span>
+              <h3>We’re a Belgium based e-commerce agency that’s obsessed with growing your business.</h3>
+              <p>We combine strategic thinking, with robust platform building and persuasive customer acquisition!</p>
+              <a href="/" class="btn">
+                <span>How we do what we do<span class="pink-dot">.</span></span>
+                  <img src="assets/icons/arrow-white.svg" alt="white arrow btn"></a>
+            </div>
+            <div class="col-img-1 t-m-order-1">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" alt="Compound growth image" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="blue-background">
+        <div class="rectangle-2 padd-top padd-bottom">
+          <p class="our-services">our services</p>
+          <div class="our-services-block justify-between">
+            <div class="col-one-three">
+              <h3 class="our-services-heading"><img src="assets/icons/sales.svg" alt="Sales">E-commerce sales</h3>
+              <div class="accordion-wrapper">
+                <h5 class="accordion">Paid Social / search<span class="symbol symbol-plus">+</span></h5>
+                <div class="panel">
+                  <p>It is here that we build your customer base by creating unique touch points for your customers.</p>
+                </div>
+              </div>
+              <div class="accordion-wrapper">
+                <h5 class="accordion">Email / SMS<span class="symbol symbol-plus">+</span></h5>
+                <div class="panel">
+                  <p>It is here that we build your customer base by creating unique touch points for your customers.</p>
+                </div>
+              </div>
+              <div class="accordion-wrapper">
+                <h5 class="accordion">Marketplaces<span class="symbol symbol-plus">+</span></h5>
+                <div class="panel">
+                  <p>It is here that we build your customer base by creating unique touch points for your customers.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-two-three">
+              <h3 class="our-services-heading"><img src="assets/icons/development.svg" alt="Development">E-commerce development</h3>
+              <div class="accordion-wrapper">
+                <h5 class="accordion">Conversion rate optimization<span class="symbol symbol-plus">+</span></h5>
+                <div class="panel">
+                  <p>It is here that we build your customer base by creating unique touch points for your customers.</p>
+                </div>
+              </div>
+              <div class="accordion-wrapper">
+                <h5 class="accordion">Page speed optimization<span class="symbol symbol-plus">+</span></h5>
+                <div class="panel">
+                  <p>It is here that we build your customer base by creating unique touch points for your customers.</p>
+                </div>
+              </div>
+              <div class="accordion-wrapper">
+                <h5 class="accordion">Platform Migration<span class="symbol symbol-plus">+</span></h5>
+                <div class="panel">
+                  <p>It is here that we build your customer base by creating unique touch points for your customers.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-one-three">
+              <h3 class="our-services-heading-2">Accelerating business <br> growth through <br> marketing sales and <br> development.</h3>
+              <a href="/" class="btn services-btn">
+                <span>Discover our services<span class="pink-dot">.</span></span>
+                <img src="assets/icons/right-arrow.svg" alt="right arrow btn">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pink-background">
+        <div class="container flex-box-1 justify-center contact-us">
+          <div class="flex-center">
+            <h3 class="our-services-heading">Want to build a high-performing <br> e-commerce brand?</h3>
+            <a href="/" class="btn">
+              <span>Contact us and prepare for launch<span class="pink-dot">.</span></span>
+              <img src="assets/icons/right-arrow.svg" alt="right arrow btn"></a>
+            </a>
           </div>
         </div>
       </div>

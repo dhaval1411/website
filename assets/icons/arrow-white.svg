@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="18px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>8CC7C944-AB6D-4E59-B21C-23D7993F97B0</title>
+    <g id="DESKTOP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="Home" transform="translate(-576.000000, -1659.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="Button" transform="translate(160.000000, 1623.000000)">
+                <g id="arrow-white" transform="translate(416.000000, 37.000000)">
+                    <line x1="0" y1="8" x2="24" y2="8" id="Path"></line>
+                    <polyline id="Path" points="16 0 24 8 16 16"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

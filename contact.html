@@ -1,0 +1,123 @@
+<!-- 05-08-2021 Commit -->
+<html>
+    <head>
+        <title>Dear Digital</title>
+        <link href="main.css" rel="stylesheet"></link>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+
+          $(document).ready(function(){
+
+            //accordion script
+            $(".accordion").click(function() {
+              console.log("clicked");
+              var acc1 = $(this).hasClass('accordion-active')
+              console.log(acc1);
+              $(".accordion").each(function() {
+                $(this).removeClass("accordion-active");
+                var panel1 = $(this).next()[0];
+                console.log(panel1);
+                panel1.classList.remove("panel-max");
+              });
+              if(acc1) {
+                $(this).removeClass("accordion-active")
+                var panel2 = $(this).next()[0];
+                console.log(panel2);
+                panel2.classList.remove("panel-max");
+              }
+              else {
+                $(this).addClass("accordion-active")
+                var panel3 = $(this).next()[0];
+                console.log(panel3);
+                panel3.classList.add("panel-max");
+              }
+            });
+
+            // Range Slider script
+            var slider = document.getElementById("mobileRange");
+            var output = document.getElementById("budget");
+            output.innerHTML = slider.value;
+
+            slider.oninput = function() {
+              output.innerHTML = this.value;
+              var value = (this.value-this.min)/(this.max-this.min)*100
+              this.style.background = 'linear-gradient(to right, #DB9195 0%, #DB9195 ' + value + '%, #fff ' + value + '%, white 100%)'
+          }
+
+        });
+        </script>
+
+    </head>
+    <body>
+      <header class="header">
+        <div class="header-wrapper">
+          <nav class="left-nav no-t-m">
+            <a href="./index.html"><img src="assets/icons/Header-Logo.svg" alt="Header Logo" /></a>
+          </nav>
+          <nav class="right-nav no-t-m">
+            <ul class="header-nav-list header-nav-list-small">
+              <li class="no-m"><a href="/pages/services">Services</a></li>
+              <li class="no-m"><a href="./work.html">Work</a></li>
+              <li class="no-m"><a href="/pages/about">About</a></li>
+              <li class="no-m"><a href="/pages/blog">Blog</a></li>
+              <li><a href="#" class="no-m" onClick="return false;"><img src="assets/imgs/cart.jpg" alt="cart icon"><span class="cart-item-count">15</span></a></li>
+              <li><a href="#"><button class="no-m">Contact us<span class="pink-dot">.</span></button></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="hero hero-homepage contactpage-hero">
+        <div class="container flex-box-1">
+          <div class="row middle-section">
+            <div class="col-txt-1 t-m-order-1">
+              <h3>Get ready to meet your Dear Digital hero.</h3>
+              <p>We seek lasting relationships to help our clients unlock rapid growth at efficient economics. Tell us where you are and where you want to be. Whatever stage you’re at, we’re happy to chat.</p>
+              <h4>Office</h4>
+              <div class="contact-address">Vlasgaardstraat 52 <br> 9000 Ghent, Belgium <br> <span class="underline-pink">Route</span>  <br>
+                <a class="underline-pink" href="mailto:info@deardigital.be">info@deardigital.be</a>
+              </div>
+              <div class="footer-icons">
+                <h4>Place the Footer icons here</h4>
+              </div>
+            </div>
+            <div class="col-txt-1 t-m-order-2">
+              <h4>Tell us about you</h4>
+              <form id="customer-contact" method="post">
+                <label for="CustomerName">What’s your name?</label>
+                <input type="text" class="white-border" placeholder="Samuel" name="customer[Name]" id="CustomerName" autocorrect="off" autocapitalize="off" required>
+                <label for="CustomerEmail">what is your emailaddress?</label>
+                <input type="text" class="white-border" placeholder="Hello@yourdomain.be" name="customer[Email]" id="CustomerEmail" autocorrect="off" autocapitalize="off" required>
+                <label for="CustomerCompany">what is your company name?</label>
+                <input type="text" class="white-border" placeholder="company" name="customer[Company]" id="CustomerCompany" autocorrect="off" autocapitalize="off" required>
+                <label for="CustomerPhone">what is your phone number?</label>
+                <input type="text" class="white-border" placeholder="+32 00 000 000" name="customer[Phone]" id="CustomerPhone" autocorrect="off" autocapitalize="off" required>
+                <label for="CustomerProject">Describe your project</label>
+                <input type="text" class="white-border" placeholder="Services, scope, timeline, etc…" name="customer[Project]" id="CustomerProject" autocorrect="off" autocapitalize="off" required>
+                <label for="CustomerBudget">what’s your budget?</label>
+                <input type="range" min="1000" max="100000" value="15000" class="slider" id="mobileRange">
+		            <p class="amount">€<span id="budget"></span></p>
+                <label class="checkbox-container">I’m glad to subscribe to your epic monthly insights
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+                <button class="btn" type="submit">
+                  <span>We’ll get back to you in 24h<span class="pink-dot">.</span></span>
+                    <img src="assets/icons/arrow-white.svg" alt="white arrow btn"></a>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="">
+        <h4 class="text-center">Place the Testimonial section here</h4>
+      </div>
+
+      <footer>
+          <h6>©2021 Dear Digital</h6>
+      </footer>
+    </body>
+</html>

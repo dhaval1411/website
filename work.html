@@ -1,0 +1,249 @@
+<!-- 05-08-2021 Commit -->
+<html>
+    <head>
+        <title>Dear Digital</title>
+        <link href="main.css" rel="stylesheet"></link>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+
+          $(document).ready(function(){
+
+            //accordion script
+            $(".accordion").click(function() {
+              console.log("clicked");
+              var acc1 = $(this).hasClass('accordion-active')
+              console.log(acc1);
+              $(".accordion").each(function() {
+                $(this).removeClass("accordion-active");
+                var panel1 = $(this).next()[0];
+                console.log(panel1);
+                panel1.classList.remove("panel-max");
+              });
+              if(acc1) {
+                $(this).removeClass("accordion-active")
+                var panel2 = $(this).next()[0];
+                console.log(panel2);
+                panel2.classList.remove("panel-max");
+              }
+              else {
+                $(this).addClass("accordion-active")
+                var panel3 = $(this).next()[0];
+                console.log(panel3);
+                panel3.classList.add("panel-max");
+              }
+            });
+
+            $(".work-type").click(function() {
+              $(".work-type").removeClass("work-selected");
+              $(this).addClass("work-selected");
+            });
+        });
+        </script>
+
+    </head>
+    <body>
+      <header class="header">
+        <div class="header-wrapper">
+          <nav class="left-nav no-t-m">
+            <a href="./index.html"><img src="assets/icons/Header-Logo.svg" alt="Header Logo" /></a>
+          </nav>
+          <nav class="right-nav no-t-m">
+            <ul class="header-nav-list header-nav-list-small">
+              <li class="no-m"><a href="/pages/services">Services</a></li>
+              <li class="no-m"><a href="#">Work</a></li>
+              <li class="no-m"><a href="/pages/about">About</a></li>
+              <li class="no-m"><a href="/pages/blog">Blog</a></li>
+              <li><a href="#" class="no-m" onClick="return false;"><img src="assets/imgs/cart.jpg" alt="cart icon"><span class="cart-item-count">15</span></a></li>
+              <li><a href="./contact.html"><button class="no-m">Contact us<span class="pink-dot">.</span></button></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="hero hero-workpage">
+        <div class="container flex-box-1">
+          <div class="row middle-section">
+            <div class="col-txt-1 t-m-order-2">
+              <span class="dear-digital-text">work</span>
+              <h3>We value our clients as partners and grow along their side. To the moon and back.</h3>
+              <p>Our team is dedicated to becoming a part of our clients’ brands and meeting their unique needs. Here are a few stories about how we helped our client partners achieve their growth goals.</p>
+              <div class="work-explore-link">
+                <div class="">
+                  <a href="#products-block">Explore our cases <img src="assets/icons/round-button.svg" alt="work explore button"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <section class="work-section flex-box-1 justify-between">
+            <span class="work-type work-selected user-select-none">Show all</span>
+            <span class="work-type user-select-none">Saas</span>
+            <span class="work-type user-select-none">Sales</span>
+            <span class="work-type user-select-none">Development</span>
+            <span class="work-type user-select-none">Paid search</span>
+            <span class="work-type user-select-none">Content marketing</span>
+            <span class="work-type user-select-none">Marketing Automation</span>
+          </section>
+        </div>
+      </div>
+
+      <div class="products-section" id="products-block">
+        <div class="container padd-top padd-bottom">
+          <div class="our-products">
+            <div class="product-img">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" class="product-desktop-img" alt="product desktop image">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" class="product-mobile-img" alt="product mobile image">
+            </div>
+            <div class="product-contents">
+              <h3 class="product-heading">Brauzz</h3>
+              <div class="product-desc">
+                <p>Scaling a company on a  succesfull mission of changing the cleaning products industry</p>
+                <ul class="product-list">
+                  <li>30% revenue</li>
+                  <li>25% customer acquisition</li>
+                  <li>Active in 25 countries</li>
+                </ul>
+              </div>
+              <a href="#" class="product-link"><span>View this case</span> <img src="assets/icons/right-arrow.svg" alt="right arrow btn"></a>
+            </div>
+          </div>
+
+          <div class="our-products rev-cols">
+            <div class="product-contents">
+              <h3 class="product-heading">Puzzle in a bag</h3>
+              <div class="product-desc">
+                <p>Our own D2C brand <br> which generated 70K <br> revenue in its first month</p>
+                <ul class="product-list">
+                  <li>70K reveneu in first month</li>
+                  <li>Fast growing start-up</li>
+                  <li>327% leads</li>
+                </ul>
+              </div>
+              <a href="#" class="product-link"><span>View this case</span> <img src="assets/icons/right-arrow.svg" alt="right arrow btn"></a>
+            </div>
+            <div class="product-img">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" class="product-mobile-img" alt="product mobile image">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" class="product-desktop-img" alt="product desktop image">
+            </div>
+          </div>
+
+          <div class="our-products">
+            <div class="product-img">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" class="product-desktop-img" alt="product desktop image">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" class="product-mobile-img" alt="product mobile image">
+            </div>
+            <div class="product-contents">
+              <h3 class="product-heading">Buddy Bites</h3>
+              <div class="product-desc">
+                <p>Generating more traffic <br> that converts for a healthy <br> dog food brand</p>
+                <ul class="product-list">
+                  <li>30% revenue</li>
+                  <li>25% customer acquisition</li>
+                  <li>Active in 25 countries</li>
+                </ul>
+              </div>
+              <a href="#" class="product-link"><span>View this case</span> <img src="assets/icons/right-arrow.svg" alt="right arrow btn"></a>
+            </div>
+          </div>
+
+          <div class="our-products rev-cols">
+            <div class="product-contents">
+              <h3 class="product-heading">Blisspaint</h3>
+              <div class="product-desc">
+                <p>Our own D2C brand <br> which generated 70K <br> revenue in its first month</p>
+                <ul class="product-list">
+                  <li>70K reveneu in first month</li>
+                  <li>Fast growing start-up</li>
+                  <li>327% leads</li>
+                </ul>
+              </div>
+              <a href="#" class="product-link"><span>View this case</span> <img src="assets/icons/right-arrow.svg" alt="right arrow btn"></a>
+            </div>
+            <div class="product-img">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" class="product-mobile-img" alt="product mobile image">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" class="product-desktop-img" alt="product desktop image">
+            </div>
+          </div>
+
+          <div class="our-products">
+            <div class="product-img">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" class="product-desktop-img" alt="product desktop image">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" class="product-mobile-img" alt="product mobile image">
+            </div>
+            <div class="product-contents">
+              <h3 class="product-heading">Pasta D’oro</h3>
+              <div class="product-desc">
+                <p>Scaling a company on a  succesfull mission of changing the cleaning products industry</p>
+                <ul class="product-list">
+                  <li>30% revenue</li>
+                  <li>25% customer acquisition</li>
+                  <li>Active in 25 countries</li>
+                </ul>
+              </div>
+              <a href="#" class="product-link"><span>View this case</span> <img src="assets/icons/right-arrow.svg" alt="right arrow btn"></a>
+            </div>
+          </div>
+
+          <div class="our-products rev-cols">
+            <div class="product-contents">
+              <h3 class="product-heading">Stickerpet</h3>
+              <div class="product-desc">
+                <p>Our own D2C brand <br> which generated 70K <br> revenue in its first month</p>
+                <ul class="product-list">
+                  <li>70K reveneu in first month</li>
+                  <li>Fast growing start-up</li>
+                  <li>327% leads</li>
+                </ul>
+              </div>
+              <a href="#" class="product-link"><span>View this case</span> <img src="assets/icons/right-arrow.svg" alt="right arrow btn"></a>
+            </div>
+            <div class="product-img">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" class="product-mobile-img" alt="product mobile image">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" class="product-desktop-img" alt="product desktop image">
+            </div>
+          </div>
+
+          <div class="our-products fade-product">
+            <div class="product-img">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" class="product-desktop-img" alt="product desktop image">
+              <img src="assets/imgs/BLUE-ON-WHITE-BG-01.png" class="product-mobile-img" alt="product mobile image">
+            </div>
+            <div class="product-contents">
+              <h3 class="product-heading">Buddy Bites</h3>
+              <div class="product-desc">
+                <p>Scaling a company on a  succesfull mission of changing the cleaning products industry</p>
+                <ul class="product-list">
+                  <li>30% revenue</li>
+                  <li>25% customer acquisition</li>
+                  <li>Active in 25 countries</li>
+                </ul>
+              </div>
+              <a href="#" class="product-link"><span>View this case</span> <img src="assets/icons/right-arrow.svg" alt="right arrow btn"></a>
+            </div>
+          </div>
+
+          <div class="load-more-btn marg-bottom">Load more<span class="pink-dot">.</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="hero-homepage work-contact-block">
+        <div class="container flex-box-1 justify-center contact-us">
+          <div class="flex-center">
+            <h3 class="our-services-heading">Want to build a high-performing <br> e-commerce brand?</h3>
+            <a href="/" class="btn">
+              <span>Contact us and prepare for launch<span class="pink-dot">.</span></span>
+              <img src="assets/icons/arrow-white.svg" alt="white arrow btn"></a>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+          <h6>©2021 Dear Digital</h6>
+      </footer>
+    </body>
+</html>

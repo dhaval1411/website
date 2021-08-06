@@ -1,0 +1,117 @@
+<!-- 06-08-2021 Commit -->
+<html>
+    <head>
+        <title>Dear Digital</title>
+        <link href="main.css" rel="stylesheet"></link>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+        <link href="assets/css/slick.css" rel="stylesheet"></link>
+        <script src="assets/js/slick.js"></script>
+
+        <script>
+
+          $(document).ready(function(){
+
+            //accordion script
+            $(".accordion").click(function() {
+              console.log("clicked");
+              var acc1 = $(this).hasClass('accordion-active')
+              console.log(acc1);
+              $(".accordion").each(function() {
+                $(this).removeClass("accordion-active");
+                var panel1 = $(this).next()[0];
+                console.log(panel1);
+                panel1.classList.remove("panel-max");
+              });
+              if(acc1) {
+                $(this).removeClass("accordion-active")
+                var panel2 = $(this).next()[0];
+                console.log(panel2);
+                panel2.classList.remove("panel-max");
+              }
+              else {
+                $(this).addClass("accordion-active")
+                var panel3 = $(this).next()[0];
+                console.log(panel3);
+                panel3.classList.add("panel-max");
+              }
+            });
+
+        });
+        </script>
+
+    </head>
+    <body>
+      <header class="header">
+        <div class="header-wrapper">
+          <nav class="left-nav no-t-m">
+            <a href="./index.html"><img src="assets/icons/Header-Logo.svg" alt="Header Logo" /></a>
+          </nav>
+          <nav class="right-nav no-t-m">
+            <ul class="header-nav-list header-nav-list-small">
+              <!-- 06-08-2021 Commit -->
+              <li class="services-dropdown no-m"><a href="./services.html">Services</a>
+                <div class="arrow-up"></div>
+                <ul class="header-nav-list-sub">
+                  <li><a href="./services.html"><img src="assets/icons/sales.svg" alt="sales-logo"> E-commerce Sales</a></li>
+                  <li><a href="./services.html"><img src="assets/icons/development.svg" alt="development-logo"> E-commerce Development</a></li>
+                </ul>
+              </li>
+              <li class="no-m"><a href="./work.html">Work</a></li>
+              <li class="about-dropdown no-m"><a href="./about.html">About</a>
+                <div class="arrow-up"></div>
+                <ul class="header-nav-list-sub about-sub-list">
+                  <li><a href="./about.html">Our team of experts</a></li>
+                  <li><a href="./about.html">Your new career</a></li>
+                </ul>
+              </li>
+              <li class="no-m"><a href="/pages/blog">Blog</a></li>
+              <li><a href="#" class="no-m"><img src="assets/imgs/cart.jpg" alt="cart icon"><span class="cart-item-count">15</span></a></li>
+              <!-- 06-08-2021 Commit Ends -->
+              <li><a href="./contact.html"><button class="no-m">Contact us<span class="pink-dot">.</span></button></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="hero hero-cartpage">
+        <div class="container flex-box-1">
+          <div class="row middle-section">
+            <div class="col-txt-1 t-m-order-2">
+              <span class="dear-digital-text">cart  </span>
+              <h3>Are we that good you want to buy <br> something? Check our awesome <br> clients who did.</h3>
+              <p>orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean <br> commodo ligula eget dolor. Aenean massa. Cum sociis natoque <br> penatibus et magnis dis parturient montes.</p>
+              <div class="work-explore-link">
+                <div class="">
+                  <a href="#products-block">Explore our shop <img src="assets/icons/round-button.svg" alt="cart explore button"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-txt-1 t-m-order-2">
+              <img class="site-logos" src="assets/imgs/BLUE-ON-WHITE-BG-01.png" alt="logos">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <section class="website-category-section flex-box-1 justify-between">
+            <span class="website-type user-select-none"><h3 class="services-heading"><span class="bullets-pts">01.</span>Food <img src="assets/icons/right-arrow.svg" alt="right arrow"></h3></span>
+            <span class="website-type user-select-none"><h3 class="services-heading"><span class="bullets-pts">02.</span>FMCG <img src="assets/icons/right-arrow.svg" alt="right arrow"></h3></span>
+            <span class="website-type user-select-none"><h3 class="services-heading"><span class="bullets-pts">03.</span>Pets <img src="assets/icons/right-arrow.svg" alt="right arrow"></h3></span>
+          </section>
+        </div>
+      </div>
+
+      <section class="testimonials-section">
+        <h3 class="text-center">Place the Testimonial section here</h3>
+      </section>
+
+      <section class="testimonials-section">
+        <h3 class="text-center">Place Let's work together section here</h3>
+      </section>
+
+      <footer>
+          <h6>©2021 Dear Digital</h6>
+      </footer>
+    </body>
+</html>

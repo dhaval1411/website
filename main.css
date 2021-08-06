@@ -13,13 +13,16 @@ body {
   font-weight: 400;
   margin: 0;
 }
+/* 06-08-2021 Commit */
 .container {
   display: block;
+  position: relative;
   width: 100%;
   max-width: 1650px;
   padding: 0 25px;
   margin: 0 auto;
 }
+/* 06-08-2021 Commit Ends */
 .rel {
   position: relative !important;
 }
@@ -133,16 +136,18 @@ header .header-nav-list button:last-child {
     letter-spacing: 1px;
     margin-left: 9px;
 }
+/* 06-08-2021 Commit */
 .hero {
-    height: 66.66666666666667vw;
+    height: 56vw;
     width: 100%;
     position: relative;
     overflow: hidden;
-    max-height: 100vh;
+    max-height: none;
     background-position: center;
     background-size: cover;
     /* margin-bottom: 80px; */
 }
+/* 06-08-2021 Commit Ends */
 .hero-homepage {
     background: linear-gradient(45deg, #1F2AC9, #303CF4);
 }
@@ -200,30 +205,34 @@ header .header-nav-list button:last-child {
 .services-block:first-child {
   border-right: 2px solid rgba(255,255,255,0.5);;
 }
+/* 06-08-2021 Commit */
 .services-block .flex-box-1 {
-  max-width: 320px;
+  max-width: 380px;
   margin: 0 auto;
 }
 .services-heading {
   width: 100%;
   font-family: Poppins SemiBold,sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 35px;
   color: #202248;
   text-align: left;
   margin: 0 0 30px;
 }
 .bullets-pts {
-  font-size: 14px;
+  font-size: 18px;
   margin-right: 8px;
 }
 .services-text {
   width: 100%;
   text-align: left;
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 28px;
   font-family: Poppins SemiBold,sans-serif;
   margin: 0;
 }
+/* 06-08-2021 Commit */
+
 .services-block .services-heading img {
   margin-left: 12px;
   height: 16px;
@@ -256,9 +265,12 @@ header .header-nav-list button:last-child {
 .pink-background {
     background-color: #DB9195;
 }
+/* 06-08-2021 Commit */
 .middle-section {
+    width: 100%;
     padding: 160px 0;
 }
+/* 06-08-2021 Commit Ends */
 .row {
     display: flex;
     justify-content: space-between;
@@ -287,6 +299,7 @@ header .header-nav-list button:last-child {
     line-height: 16px;
     text-transform: uppercase;
 }
+/* 06-08-2021 Commit */
 .middle-section .col-txt-1 h3 {
     max-width: 800px;
     color: #fff;
@@ -295,7 +308,7 @@ header .header-nav-list button:last-child {
     font-weight: 600;
     letter-spacing: 0;
     line-height: 56px;
-    margin: 16px 0 44px;
+    margin: 16px 0 40px;
 }
 .middle-section .col-txt-1 p {
     max-width: 640px;
@@ -304,8 +317,9 @@ header .header-nav-list button:last-child {
     font-size: 18px;
     letter-spacing: 0;
     line-height: 32px;
-    margin: 0 0 40px;
+    margin: 0;
 }
+/* 06-08-2021 Commit Ends */
 .btn {
     width: 480px;
     height: 88px;
@@ -464,9 +478,11 @@ header .header-nav-list button:last-child {
 }
 
 @media (min-width: 1601px) {
-  .explore-link {
+  /* 06-08-2021 Commit */
+  /* .explore-link {
     right: calc( 10% - 170px )%;
-  }
+  } */
+  /* 06-08-2021 Commit Ends */
 }
 
 /* 05-08-2021 Commit */
@@ -493,20 +509,50 @@ body span {
     font-size: 16px !important;
     padding: 0 12px !important;
   }
-  .work-explore-link {
+  /* 06-08-2021 Commit */
+
+  /* .work-explore-link {
     margin: 40px 0 0 !important;
-  }
+  } */
+
+  /* 06-08-2021 Commit Ends */
   .contactpage-hero {
     height: 180vh !important;
   }
 }
 
 @media (max-width: 1360px) {
+  /* 06-08-2021 Commit */
+  .hero {
+    height: 82vw;
+  }
+  .middle-section .col-txt-1 h3 {
+    font-size: 32px;
+    line-height: 44px;
+  }
+  .middle-section .col-txt-1 p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .work-explore-link {
+      margin-top: 80px !important;
+  }
+  /* 06-08-2021 Commit Ends */
   .services-btn {
     width: 300px !important;
   }
 }
 
+/* 06-08-2021 Commit */
+@media (min-width: 1361px) and (max-width: 1600px) {
+  .hero {
+    height: 62vw;
+  }
+  .work-explore-link {
+      margin-top: 120px !important;
+  }
+}
+/* 06-08-2021 Commit Ends */
 button {
   background: transparent;
   cursor: pointer;
@@ -514,15 +560,19 @@ button {
 .hero-workpage {
     background: linear-gradient(45deg, #13005E, #02008B);
 }
+/* 06-08-2021 Commit */
 .hero-workpage .middle-section .col-txt-1 {
-    width: 70%;
+    width: 100%;
 }
+/* 06-08-2021 Commit Ends */
 .hero-workpage .middle-section .col-txt-1 p {
     max-width: 510px;
 }
+/* 06-08-2021 Commit */
 .work-explore-link {
-    margin: 80px 0 0;
+    margin: 160px 0 0;
 }
+/* 06-08-2021 Commit Ends */
 .work-explore-link a {
     display: flex;
     align-items: center;
@@ -634,8 +684,9 @@ button {
     display: flex;
     justify-content: space-between;
 }
+/* 06-08-2021 Commit */
 .product-contents p {
-    width: 40%;
+    width: 45%;
     color: #202248;
     font-family: Poppins;
     font-size: 24px;
@@ -644,6 +695,7 @@ button {
     line-height: 35px;
     margin: 0;
 }
+/* 06-08-2021 Commit Ends */
 .product-contents ul.product-list {
     width: 50%;
     color: #202248;
@@ -721,11 +773,11 @@ button {
 .work-contact-block .contact-us .pink-dot {
     color: #DB9195;
 }
-
+/* 06-08-2021 Commit */
 .contactpage-hero {
-    height: 142vh;
-    max-height: none;
+    height: 66vw;
 }
+/* 06-08-2021 Commit Ends */
 .contactpage-hero .middle-section {
     width: 100%;
     padding: 306px 0 0 0;
@@ -803,9 +855,12 @@ button {
 #customer-contact input::-ms-input-placeholder { /* Microsoft Edge */
     color: rgba(255,255,255,0.5);
 }
+/* 06-08-2021 Commit */
 .amount {
     color: #fff !important;
+    margin-bottom: 40px !important;
 }
+/* 06-08-2021 Commit Ends*/
 .white-border {
     background: transparent;
     border: 0;
@@ -822,7 +877,7 @@ button {
 /*   	height: 6px; */
     border: none;
 }
-
+/* 06-08-2021 Commit */
 #mobileRange {
   background: linear-gradient(to right, #DB9195 0%, #DB9195 15%, #fff 15%, #fff 100%);
   /* border: 1px solid #DB9195;
@@ -832,8 +887,9 @@ button {
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
+  margin-bottom: 12px !important;
 }
-
+/* 06-08-2021 Commit Ends */
 #mobileRange::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -920,4 +976,211 @@ button {
     width: 16px;
     height: 16px;
     background-color: #DB9195;
+}
+
+/* 06-08-2021 Commit */
+.marg-bottom-xl {
+    margin-bottom: 180px;
+}
+.partner-section {
+    position: relative;
+    padding-top: 164px;
+    padding-bottom: 120px;
+    text-align: center;
+}
+.partner-carousel {
+    margin-top: 50px;
+}
+.partner-carousel img {
+    width: 192px;
+    height: 96px;
+    object-fit: contain;
+}
+.partner-blur {
+    height: 96px;
+    width: 200px;
+    transform: scaleX(-1);
+    background: linear-gradient(270deg, #2631D4 0%, rgba(31,42,201,0) 100%);
+    position: absolute;
+    bottom: 120px;
+    z-index: 1
+}
+
+.blur-left {
+    left: 0;
+}
+
+.blur-right{
+    right: 0;
+    transform: rotate(360deg);
+}
+
+.services-dropdown, .about-dropdown {
+    position: relative;
+}
+.services-dropdown:hover .header-nav-list-sub, .about-dropdown:hover .header-nav-list-sub {
+    max-height: 999px;
+}
+.services-dropdown:hover .arrow-up, .about-dropdown:hover .arrow-up {
+    display: block;
+}
+.header-nav-list-sub {
+    display: block;
+    border: 0;
+    position: absolute;
+    left: -90px;
+    z-index: 1;
+    width: 300px;
+    min-width: 80px;
+    text-align: left;
+    top: 34px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    transition-delay: 0s;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0;
+    box-shadow: 4px 4px 24px 0 rgba(32,34,72,0.4);
+}
+.header-nav-list-sub li {
+    display: flex !important;
+    align-items: center;
+    margin: 32px 20px 16px;
+}
+.header-nav-list-sub li:last-child {
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+.header-nav-list-sub li a {
+    display: flex;
+    align-items: center;
+    color: #202248;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 25px;
+    margin: 0;
+}
+.header-nav-list-sub li a img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    margin-right: 30px;
+}
+.about-sub-list li {
+    margin: 35px 40px 21px;
+}
+.about-sub-list li:last-child {
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+.arrow-up {
+    display: none;
+    position: absolute;
+    top: 24px;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+}
+.scribble-circle {
+    display: inline-block;
+    position: relative;
+}
+.scribble-circle:after {
+    content: '';
+    background-image: url("assets/icons/scribble-round.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.scribble-underline {
+    display: inline-block;
+    position: relative;
+}
+.scribble-underline:after {
+    content: '';
+    background-image: url("assets/icons/scribble-underline.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+}
+.scribble-circle-2:after {
+    width: 60%;
+    top: 0;
+    background-image: url("assets/icons/scribble-round-2.svg");
+}
+.scribble-underline-2:after {
+    width: 52%;
+    top: 50%;
+    left: 48%;
+    background-image: url("assets/icons/scribble-white.svg");
+}
+.scribble-wave:after {
+    top: 90%;
+    background-repeat: repeat-x;
+    background-image: url("assets/icons/scribble-wave.svg");
+}
+.scribble-workpage::after{
+    width: 52%;
+    top: 50%;
+    left: 48%;
+}
+.hero-cartpage {
+    background: linear-gradient(45deg, #501BBB, #6630F4);
+}
+.hero-cartpage .middle-section .col-txt-1 {
+    width: 50%;
+}
+.hero-cartpage .middle-section .col-txt-1 p {
+    max-width: 510px;
+}
+.hero-cartpage .middle-section .col-txt-1 .site-logos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.website-category-section {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    width: 100%;
+    max-width: 1440px;
+    height: 120px;
+    background-color: #DB9195;
+    margin: 0 auto;
+}
+.website-type {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    border-right: 2px solid rgb(255,255,255,0.5);
+    padding: 0 80px;
+}
+.website-type:last-child {
+    border: none;
+}
+.website-type .services-heading {
+    margin: 0;
+}
+.website-type .services-heading img {
+    margin-left: 20px;
 }

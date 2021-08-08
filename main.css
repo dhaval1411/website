@@ -184,9 +184,11 @@ header .header-nav-list button:last-child {
 .padd-top {
   padding-top: 80px !important;
 }
-.padd-top {
+/* 08-08-2021 Commit */
+.padd-bottom {
   padding-bottom: 80px !important;
 }
+/* 08-08-2021 Commit Ends */
 .services-section {
   position: absolute;
   left: 0;
@@ -499,16 +501,19 @@ body span {
   .our-services {
     margin: 40px 80px 30px;
   }
+  /* 08-08-2021 Commit */
   .work-section {
-    max-width: 900px !important;
+    /* max-width: 900px !important; */
     padding: 0 25px !important;
-    left: 1% !important;
-    right: 1% !important;
+    left: 0 !important;
+    right: 0 !important;
   }
   .work-type {
-    font-size: 16px !important;
-    padding: 0 12px !important;
+    /* font-size: 16px !important;
+    padding: 0 12px !important; */
   }
+  /* 08-08-2021 Commit Ends */
+
   /* 06-08-2021 Commit */
 
   /* .work-explore-link {
@@ -521,7 +526,10 @@ body span {
   }
 }
 
-@media (max-width: 1360px) {
+/* 08-08-2021 Commit */
+@media (min-width: 1024px) and (max-width: 1360px) {
+/* 08-08-2021 Commit Ends */
+
   /* 06-08-2021 Commit */
   .hero {
     height: 82vw;
@@ -541,6 +549,18 @@ body span {
   .services-btn {
     width: 300px !important;
   }
+
+  /* 08-08-2021 Commit */
+  .website-category-section {
+      max-width: 900px !important;
+  }
+  .website-type {
+      padding: 0 40px !important;
+  }
+  .product {
+      margin: 0 6px;
+  }
+  /* 06-08-2021 Commit Ends */
 }
 
 /* 06-08-2021 Commit */
@@ -551,6 +571,15 @@ body span {
   .work-explore-link {
       margin-top: 120px !important;
   }
+
+  /* 08-08-2021 Commit */
+  .website-category-section {
+      max-width: 1100px !important;
+  }
+  .product {
+      margin: 0 24px;
+  }
+  /* 08-08-2021 Commit Ends */
 }
 /* 06-08-2021 Commit Ends */
 button {
@@ -1156,17 +1185,19 @@ button {
     height: 100%;
     object-fit: cover;
 }
+/* 08-08-2021 Commit */
 .website-category-section {
     position: absolute;
     bottom: 0;
-    left: 10%;
-    right: 10%;
+    left: 25px;
+    /* right: 10%; */
     width: 100%;
     max-width: 1440px;
     height: 120px;
     background-color: #DB9195;
     margin: 0 auto;
 }
+/* 08-08-2021 Commit Ends */
 .website-type {
     width: 100%;
     max-width: 480px;
@@ -1183,4 +1214,108 @@ button {
 }
 .website-type .services-heading img {
     margin-left: 20px;
+}
+/* 08-08-2021 Commit */
+.food-products {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 120px;
+    background-color: #FAFAFD;
+}
+.product-heading h3 {
+  color: #202248;
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 56px;
+  margin: 0;
+  margin-bottom: 94px;
+}
+.product-heading h3 span {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    max-width: 480px;
+    height: 764px;
+    background-color: #FFFFFF;
+    box-shadow: 4px 4px 24px 0 rgba(32,34,72,0.06)
+}
+.product-image {
+    width: 100%;
+    height: 439px;
+    position: relative;
+}
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-image .product-logo {
+    position: absolute;
+    bottom: -40px;
+    right: 40px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.product-description {
+    width: 100%;
+    height: 325px;
+    display: block;
+    position: relative;
+    padding: 0 40px;
+}
+.product-description h3 {
+    width: 100%;
+    display: block;
+    color: #202248;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 35px;
+    margin: 0;
+    margin-top: 40px;
+}
+.product-description p {
+    color: #8F90A3;
+    font-family: Poppins;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 25px;
+    margin: 0;
+    margin-top: 8px;
+}
+.product-description .desc {
+    display: block;
+    width: max-content;
+    color: #8F90A3;
+    font-family: Poppins;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 21px;
+    border-bottom: 2px solid #DB9195;
+    margin: 0;
+    margin-top: 16px;
+}
+.product-btn {
+    width: 100%;
+    margin-top: 32px;
+    color: #202248;
+    background-color: #DB9195;
+}
+.product-btn .pink-dot {
+    color: #fff;
+}
+.second-row {
+    margin-top: 120px;
 }

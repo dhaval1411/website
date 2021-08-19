@@ -57,24 +57,27 @@ $(document).ready(function(){
     ]
   });
 
-  $('.homepage-products-carousel').slick({
-    infinite: false,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    dots: true,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 560,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-          arrows: false
-        }
-      }
-    ]
-  });
+  // 19-08-2021 Commit
+  
+  // $('.homepage-products-carousel').slick({
+  //   infinite: false,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 2,
+  //   dots: true,
+  //   arrows: false,
+  //   responsive: [
+  //     {
+  //       breakpoint: 560,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         dots: true,
+  //         arrows: false
+  //       }
+  //     }
+  //   ]
+  // });
 
+  // 19-08-2021 Commit Ends
 
 });

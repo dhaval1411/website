@@ -16,7 +16,32 @@
         <link href="assets/css/slick.css" rel="stylesheet"></link>
         <script src="assets/js/slick.js"></script>
         <!-- 06-08-2021 Commit Ends -->
-
+        <script>
+        $(document).ready(function () {
+          $(".header-link").removeClass("page-selected")
+          if(window.location.href.indexOf("work") > -1) {
+            $(".header-link").each(function() {
+              if($(this).text() == "work") {
+              	$(this).addClass("page-selected");
+              }
+           });
+          }
+          if(window.location.href.indexOf("service") > -1) {
+            $(".header-link").each(function() {
+              if($(this).text() == "service") {
+              	$(this).addClass("page-selected");
+              }
+           });
+          }
+          if(window.location.href.indexOf("about") > -1) {
+            $(".header-link").each(function() {
+              if($(this).text() == "about") {
+              	$(this).addClass("page-selected");
+              }
+           });
+          }
+        });
+        </script>
         <script>
 
           $(document).ready(function(){
@@ -47,6 +72,7 @@
             });
         });
         </script>
+
         <!-- 04-08-2021 Commit -->
     </head>
     <body>
@@ -59,15 +85,15 @@
           <nav class="right-nav no-t-m">
             <ul class="header-nav-list header-nav-list-small">
               <!-- 06-08-2021 Commit -->
-              <li class="services-dropdown no-m"><a href="./services.html">Services</a>
+              <li class="services-dropdown no-m"><a href="./services.html" class="header-link">Services</a>
                 <div class="arrow-up"></div>
                 <ul class="header-nav-list-sub">
                   <li><a href="./services.html"><img src="assets/icons/sales.svg" alt="sales-logo"> E-commerce Sales</a></li>
                   <li><a href="./services.html"><img src="assets/icons/development.svg" alt="development-logo"> E-commerce Development</a></li>
                 </ul>
               </li>
-              <li class="no-m"><a href="./work.html">Work</a></li>
-              <li class="about-dropdown no-m"><a href="./about.html">About</a>
+              <li class="no-m"><a href="./work.html" class="header-link">Work</a></li>
+              <li class="about-dropdown no-m"><a href="./about.html" class="header-link">About</a>
                 <div class="arrow-up"></div>
                 <ul class="header-nav-list-sub about-sub-list">
                   <li><a href="./about.html">Our team of experts</a></li>
@@ -183,7 +209,9 @@
           </div>
           <div class="rel">
             <div class="homepage-products-blur blur-right"></div>
-            <div class="homepage-products-carousel">
+            <!-- 19-08-2021 Commit -->
+            <div class="homepage-products-carousel for-scroll">
+              <!-- 19-08-2021 Commit Ends -->
               <div class="homepage-products">
                 <div class="product-images">
                   <!-- 17-08-2021 Commit -->
@@ -244,7 +272,9 @@
                   </div>
                 </div>
               </div>
-              <div class="homepage-products">
+              <!-- 19-08-2021 Commit -->
+              <div class="homepage-products more-marg-right">
+                <!-- 19-08-2021 Commit Ends -->
                 <div class="product-images">
                   <!-- 17-08-2021 Commit -->
                   <img src="assets/imgs/product-img.jpg" class="desktop-img no-t-m" alt="product desktop image">
@@ -265,6 +295,16 @@
                 </div>
               </div>
             </div>
+            <!-- 19-08-2021 Commit -->
+            <div class="container">
+              <div class="homepage-slide slide-number">
+                <img src="assets/icons/pointer-white.svg" class="slider-left" alt="left arrow">
+                <span class="current-slide">1</span>
+                <span class="total-slides"> / 4</span>
+                <img src="assets/icons/pointer-white.svg" class="slider-right" alt="right arrow">
+              </div>
+            </div>
+            <!-- 19-08-2021 Commit Ends -->
           </div>
         </div>
 
@@ -365,9 +405,62 @@
         </div>
       </div>
 
-
       <footer>
           <h6>©2021 Dear Digital</h6>
       </footer>
+
+      <!-- 19-08-2021 Commit -->
+      <script>
+
+        const slider = document.querySelector('.homepage-products-carousel');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+          isDown = true;
+          slider.classList.add('active');
+          startX = e.pageX - slider.offsetLeft;
+          scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+          isDown = false;
+          slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+          isDown = false;
+          slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+          if(!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - slider.offsetLeft;
+          const walk = (x - startX) * 3; //scroll-fast
+          slider.scrollLeft = scrollLeft - walk;
+          // console.log(walk);
+        });
+      </script>
+
+      <script>
+        const rightBtn = document.querySelector('.slider-right');
+        const leftBtn = document.querySelector('.slider-left');
+
+        rightBtn.addEventListener("click", function(event) {
+          // $('.homepage-products-carousel').animate({scrollLeft: $('.homepage-products').next().position().left}, 500);
+        const content = document.querySelector('.homepage-products-carousel');
+        content.scrollLeft += 300;
+        leftBtn.style.display = "block";
+        event.preventDefault();
+        });
+
+        leftBtn.addEventListener("click", function(event) {
+          // $('.homepage-products-carousel').animate({scrollLeft: $('.homepage-products').prev().position().left}, 500);
+        const content = document.querySelector('.homepage-products-carousel');
+        content.scrollLeft -= 300;
+        event.preventDefault();
+        });
+      </script>
+      <!-- 19-08-2021 Commit Ends -->
+
     </body>
 </html>

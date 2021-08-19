@@ -1343,16 +1343,22 @@ button {
     line-height: 56px;
 }
 /* 17-08-2021 Commit Ends */
+/* 19-08-2021 Commit */
 .homepage-products-carousel {
+    display: flex;
     max-width: 1600px;
     margin: 0 auto;
     margin-top: 160px;
+    padding-bottom: 40px;
 }
+/* 19-08-2021 Commit Ends */
 .homepage-products-carousel .slick-list {
     padding-right: 160px;
     width: 100%;
 }
+/* 19-08-2021 Commit */
 .homepage-products {
+    min-width: 40%;
     height: 597px !important;
     display: flex;
     flex-direction: column;
@@ -1360,6 +1366,7 @@ button {
     position: relative;
     margin: 0 80px 0 0;
 }
+/* 19-08-2021 Commit Ends */
 .homepage-products .product-images {
     display: flex;
     width: 100%;
@@ -1431,11 +1438,13 @@ button {
 .homepage-products .product-contents .product-heading:hover img {
     visibility: visible;
 }
+/* 19-08-2021 Commit */
 .homepage-products .product-contents .prod-abs {
     position: absolute;
-    top: -60px;
-    width: 45%;
+    bottom: 20px;
+    width: 50%;
 }
+/* 19-08-2021 Commit Ends */
 .homepage-products .product-contents ul.product-list {
     width: 100%;
 }
@@ -1479,15 +1488,17 @@ button {
 .homepage-products-carousel .slick-dots li button:before {
     border-radius: 0;
 }
+/* 19-08-2021 Commit */
 .homepage-products-blur {
-    height: 478px;
+    height: 550px;
     width: 180px;
     transform: scaleX(-1);
     background: linear-gradient(270deg, #1F2AC9 0%, rgba(31,42,201,0) 100%);
     position: absolute;
     top: 0px;
-    z-index: 1;
+    z-index: 4;
 }
+/* 19-08-2021 Commit Ends */
 .rect-wrapper {
     position: absolute;
     bottom: 446px;
@@ -1535,17 +1546,23 @@ button {
       font-size: 20px;
       line-height: 24px;
     }
-    .homepage-products .product-contents .prod-abs {
-      top: -20px;
+    /* 19-08-2021 Commit */
+
+    /* .homepage-products .product-contents .prod-abs {
       width: 50%;
-    }
+    } */
+
+    /* 19-08-2021 Commit Ends*/
+
     /* 18-08-2021 Commit */
     .homepage-products-carousel .slick-dots {
       bottom: -20px;
     }
+    /* 19-08-2021 Commit */
     .homepage-products-blur {
-      width: 100px;
+      width: 140px;
     }
+    /* 19-08-2021 Commit Ends */
     /* 18-08-2021 Commit Ends */
 }
 @media (min-width: 1161px) and (max-width: 1260px) {
@@ -1566,9 +1583,14 @@ button {
       font-size: 20px;
       line-height: 24px;
     }
-    .homepage-products .product-contents .prod-abs {
+    /* 19-08-2021 Commit */
+
+    /* .homepage-products .product-contents .prod-abs {
       width: 50%;
-    }
+    } */
+
+    /* 19-08-2021 Commit Ends */
+
     /* 18-08-2021 Commit Ends */
 }
 @media (min-width: 1601px) {
@@ -1749,24 +1771,31 @@ button {
     .homepage-products-carousel .slick-dots {
       bottom: -40px;
     }
-    .homepage-products-blur {
+    /* 19-08-2021 Commit */
+    /* .homepage-products-blur {
       height: 100%;
-    }
+    } */
+    /* 19-08-2021 Commit Ends */
 }
 @media (max-width: 560px) {
     .blue-circle {
       height: 250vw;
       border-radius: 180px;
     }
+    /* 19-08-2021 Commit */
     .homepage-products {
+      min-width: 75%;
       margin: 0 40px 0 0;
     }
+    /* 19-08-2021 Commit Ends */
     .homepage-products-carousel .slick-list {
       padding-right: 80px !important;
     }
+    /* 19-08-2021 Commit */
     .homepage-products-blur {
-      width: 120px;
+      width: 80px;
     }
+    /* 19-08-2021 Commit Ends */
     .homepage-products-carousel .slick-dots {
         width: 95%;
     }
@@ -1797,15 +1826,22 @@ button {
     .pyramid-block p {
       font-size: 14px;
     }
+    /* 19-08-2021 Commit */
+    .more-marg-right {
+      margin-right: 80px !important;
+    }
+    /* 19-08-2021 Commit Ends */
 }
 @media (max-width: 375px) {
   .blue-circle {
       height: 280vw;
       border-radius: 160px;
   }
-  .homepage-products-blur {
+  /* 19-08-2021 Commit */
+  /* .homepage-products-blur {
       width: 80px;
-  }
+  } */
+  /* 19-08-2021 Commit Ends */
   .pyramid-1 {
       max-width: 225px;
   }
@@ -1840,9 +1876,11 @@ button {
   .homepage-products .product-images .mobile-img {
       height: 390px;
   }
+  /* 19-08-2021 Commit */
   .homepage-products-blur {
-      width: 80px;
+      width: 60px;
   }
+  /* 19-08-2021 Commit Ends */
   .pyramid-1 {
       max-width: 170px;
   }
@@ -1896,9 +1934,11 @@ button {
     font-size: 20px;
     line-height: 24px;
   }
-  .homepage-products .product-contents .prod-abs {
+  /* 19-08-2021 Commit */
+  /* .homepage-products .product-contents .prod-abs {
     width: 50%;
-  }
+  } */
+  /* 19-08-2021 Commit Ends */
   .homepage-products .product-contents .product-heading {
     font-size: 20px;
     line-height: 24px;
@@ -1909,10 +1949,12 @@ button {
   .homepage-products-carousel .slick-dots {
     bottom: -40px;
   }
+  /* 19-08-2021 Commit */
   .homepage-products-blur {
-    width: 100px;
-    height: 100%;
+    width: 140px;
+    /* height: 100%; */
   }
+  /* 19-08-2021 Commit Ends */
 }
 @media (min-width: 1601px) and (max-width: 1700px) {
   .blue-circle {
@@ -1927,5 +1969,93 @@ button {
 @media (min-width: 1801px) and (max-width: 1880px) {
   .blue-circle {
     height: 105vw;
+  }
+}
+.page-selected {
+    border-bottom: 2px solid pink;
+}
+
+/* 19-08-2021 Commit */
+.rev-cols .product-img {
+  order: 2;
+}
+.rev-cols .product-contents {
+  order: 1;
+}
+.for-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    justify-content: flex-start!important;
+}
+/* width */
+.for-scroll::-webkit-scrollbar {
+  height: 2px;
+}
+/* Track */
+.for-scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #3C3C3B33;
+  background: #B7BAEE;
+  max-width: 95%;
+  margin: 0 auto;
+}
+/* Handle */
+.for-scroll::-webkit-scrollbar-thumb {
+  background: #1F2AC9;
+}
+/* Handle on hover */
+.for-scroll::-webkit-scrollbar-thumb:hover {
+  background: #1F2AC9;
+}
+
+.homepage-products-carousel.for-scroll::-webkit-scrollbar-track {
+  background: #303CF4;
+}
+.homepage-products-carousel.for-scroll::-webkit-scrollbar-thumb {
+  background: #DB9195;
+}
+.homepage-products-carousel.for-scroll::-webkit-scrollbar-thumb:hover {
+  background: #DB9195;
+}
+.homepage-products-carousel.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+.homepage-slide {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 25px;
+}
+.homepage-slide .slider-right {
+    display: block;
+    margin-left: 12px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+.homepage-slide .slider-left {
+    display: none;
+    margin-right: 12px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+.more-marg-right {
+  margin-right: 220px !important;
+}
+@media (min-width: 561px) and (max-width: 992px) {
+  .homepage-products {
+    min-width: 35%;
+  }
+  .homepage-products-blur {
+    width: 80px;
   }
 }

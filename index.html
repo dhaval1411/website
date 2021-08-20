@@ -209,19 +209,15 @@
           </div>
           <div class="rel">
             <div class="homepage-products-blur blur-right"></div>
-            <!-- 19-08-2021 Commit -->
-            <div class="homepage-products-carousel for-scroll">
-              <!-- 19-08-2021 Commit Ends -->
+            <div class="homepage-products-carousel">
               <div class="homepage-products">
                 <div class="product-images">
-                  <!-- 17-08-2021 Commit -->
                   <img src="assets/imgs/product-img.jpg" class="desktop-img no-t-m" alt="product desktop image">
-                  <!-- 17-08-2021 Commit Ends -->
                   <img src="assets/imgs/product-img.jpg" class="mobile-img" alt="product mobile image">
                 </div>
                 <div class="product-contents">
                   <div class="prod-abs">
-                    <a href="#" class=""><h3 class="product-heading"><span class="prod-title">Brauzz</span> <img src="assets/icons/right-arrow.svg" alt="right arrow btn"></h3></a>
+                    <a href="#" class="" tabindex="0"><h3 class="product-heading"><span class="prod-title">Brauzz</span> <img src="/website/assets/icons/arrow-white.svg" alt="right arrow btn"></h3></a>
                     <div class="product-descrip">
                       <ul class="product-list">
                         <li>30% revenue</li>
@@ -234,14 +230,12 @@
               </div>
               <div class="homepage-products">
                 <div class="product-images">
-                  <!-- 17-08-2021 Commit -->
                   <img src="assets/imgs/product-img.jpg" class="desktop-img no-t-m" alt="product desktop image">
-                  <!-- 17-08-2021 Commit Ends -->
                   <img src="assets/imgs/product-img.jpg" class="mobile-img" alt="product mobile image">
                 </div>
                 <div class="product-contents">
                   <div class="prod-abs">
-                    <a href="#" class=""><h3 class="product-heading"><span class="prod-title">Puzzle in a bag</span> <img src="assets/icons/right-arrow.svg" alt="right arrow btn"></h3></a>
+                    <a href="#" class="" tabindex="0"><h3 class="product-heading"><span class="prod-title">Puzzle in a bag</span> <img src="/website/assets/icons/arrow-white.svg" alt="right arrow btn"></h3></a>
                     <div class="product-descrip">
                       <ul class="product-list">
                         <li>30% revenue</li>
@@ -254,14 +248,12 @@
               </div>
               <div class="homepage-products">
                 <div class="product-images">
-                  <!-- 17-08-2021 Commit -->
                   <img src="assets/imgs/product-img.jpg" class="desktop-img no-t-m" alt="product desktop image">
-                  <!-- 17-08-2021 Commit Ends -->
                   <img src="assets/imgs/product-img.jpg" class="mobile-img" alt="product mobile image">
                 </div>
                 <div class="product-contents">
                   <div class="prod-abs">
-                    <a href="#" class=""><h3 class="product-heading"><span class="prod-title">Buddy Bites</span> <img src="assets/icons/right-arrow.svg" alt="right arrow btn"></h3></a>
+                    <a href="#" class="" tabindex="-1"><h3 class="product-heading"><span class="prod-title">Buddy Bites</span> <img src="/website/assets/icons/arrow-white.svg" alt="right arrow btn"></h3></a>
                     <div class="product-descrip">
                       <ul class="product-list">
                         <li>30% revenue</li>
@@ -272,18 +264,14 @@
                   </div>
                 </div>
               </div>
-              <!-- 19-08-2021 Commit -->
-              <div class="homepage-products more-marg-right">
-                <!-- 19-08-2021 Commit Ends -->
+              <div class="homepage-products">
                 <div class="product-images">
-                  <!-- 17-08-2021 Commit -->
                   <img src="assets/imgs/product-img.jpg" class="desktop-img no-t-m" alt="product desktop image">
-                  <!-- 17-08-2021 Commit Ends -->
                   <img src="assets/imgs/product-img.jpg" class="mobile-img" alt="product mobile image">
                 </div>
                 <div class="product-contents">
                   <div class="prod-abs">
-                    <a href="#" class=""><h3 class="product-heading"><span class="prod-title">Blisspaint</span> <img src="assets/icons/right-arrow.svg" alt="right arrow btn"></h3></a>
+                    <a href="#" class="" tabindex="-1"><h3 class="product-heading"><span class="prod-title">Blisspaint</span> <img src="/website/assets/icons/arrow-white.svg" alt="right arrow btn"></h3></a>
                     <div class="product-descrip">
                       <ul class="product-list">
                         <li>30% revenue</li>
@@ -295,13 +283,17 @@
                 </div>
               </div>
             </div>
+          </div>
+
             <!-- 19-08-2021 Commit -->
             <div class="container">
               <div class="homepage-slide slide-number">
-                <img src="assets/icons/pointer-white.svg" class="slider-left" alt="left arrow">
+                <img src="assets/icons/pointer-white.svg" class="slider-left slick-arrow" alt="left arrow" style="">
                 <span class="current-slide">1</span>
-                <span class="total-slides"> / 4</span>
-                <img src="assets/icons/pointer-white.svg" class="slider-right" alt="right arrow">
+                <span class="slide-slash">/</span>
+                <span class="total-slides no-m">2</span>
+                <span class="total-slides no-t no-d">4</span>
+                <img src="assets/icons/pointer-white.svg" class="slider-right slick-arrow" alt="right arrow" style="">
               </div>
             </div>
             <!-- 19-08-2021 Commit Ends -->
@@ -422,6 +414,24 @@
           slider.classList.add('active');
           startX = e.pageX - slider.offsetLeft;
           scrollLeft = slider.scrollLeft;
+          // setTimeout(function(){
+          //   if(checkVisibilityofLast()) {
+          //     rightBtn.style.display = "none";
+          //     var currentVal = parseInt($(".current-slide").text());
+          //     var newVal = currentVal + 1;
+          //     $(".current-slide").text(newVal);
+          //   }
+          // }
+          // , 600);
+          // setTimeout(function(){
+          //   if(checkVisibilityofFirst()) {
+          //     leftBtn.style.display = "none";
+          //     var currentVal = parseInt($(".current-slide").text());
+          //     var newVal = currentVal - 1;
+          //     $(".current-slide").text(newVal);
+          //   }
+          // }
+          // , 600);
         });
         slider.addEventListener('mouseleave', () => {
           isDown = false;
@@ -442,23 +452,91 @@
       </script>
 
       <script>
+
+      function checkVisibilityofFirst() {
+        var top_of_element = $(".homepage-products:first-child").offset().top;
+        var bottom_of_element = $(".homepage-products:first-child").offset().top + $(".homepage-products:first-child").outerHeight();
+        var left_of_element = $(".homepage-products:first-child").offset().left;
+        var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+        var top_of_screen = $(window).scrollTop();
+        var left_of_screen = $(window).scrollLeft();
+        var right_of_screen = $(window).scrollLeft() + $(window).innerWidth();
+
+        if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)
+          && (left_of_screen <= left_of_element) && (left_of_element <= right_of_screen)) {
+            // the element is visible, do something
+            console.log("Inside viewport : "+$(window).scrollLeft()+":"+$(".homepage-products:first-child").offset().left + ":" +($(window).scrollLeft() + $(window).innerWidth()));
+            return true;
+        } else {
+            // the element is not visible, do something else
+            console.log("Outside viewport : "+$(window).scrollLeft()+":"+$(".homepage-products:first-child").offset().left + ":" +($(window).scrollLeft() + $(window).innerWidth()));
+            return false;
+        }
+      }
+
+        function checkVisibilityofLast() {
+          var top_of_element = $(".homepage-products.more-marg-right").offset().top;
+          var bottom_of_element = $(".homepage-products.more-marg-right").offset().top + $(".homepage-products.more-marg-right").outerHeight();
+          var left_of_element = $(".homepage-products.more-marg-right").offset().left;
+          var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+          var top_of_screen = $(window).scrollTop();
+          var left_of_screen = $(window).scrollLeft();
+          var right_of_screen = $(window).scrollLeft() + $(window).innerWidth();
+
+          if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)
+            && (left_of_screen <= left_of_element) && (left_of_element <= right_of_screen)) {
+              // the element is visible, do something
+              console.log("Inside viewport : "+$(window).scrollLeft()+":"+$(".homepage-products.more-marg-right").offset().left + ":" +($(window).scrollLeft() + $(window).innerWidth()));
+              return true;
+          } else {
+              // the element is not visible, do something else
+              console.log("Outside viewport : "+$(window).scrollLeft()+":"+$(".homepage-products.more-marg-right").offset().left + ":" +($(window).scrollLeft() + $(window).innerWidth()));
+              return false;
+          }
+        }
+
+        var window_width = $(window).width();
+
         const rightBtn = document.querySelector('.slider-right');
         const leftBtn = document.querySelector('.slider-left');
 
-        rightBtn.addEventListener("click", function(event) {
-          // $('.homepage-products-carousel').animate({scrollLeft: $('.homepage-products').next().position().left}, 500);
-        const content = document.querySelector('.homepage-products-carousel');
-        content.scrollLeft += 300;
-        leftBtn.style.display = "block";
-        event.preventDefault();
-        });
+        // rightBtn.addEventListener("click", function(event) {
+        //   // $('.homepage-products-carousel').animate({scrollLeft: $('.homepage-products').next().position().left}, 500);
+        // const content = document.querySelector('.homepage-products-carousel');
+        //
+        // content.scrollLeft = content.scrollLeft +  window_width;
+        // leftBtn.style.display = "block";
+        // console.log("Slider done");
+        // setTimeout(function(){
+        //   if(checkVisibilityofLast()) {
+        //     rightBtn.style.display = "none";
+        //   }
+        // }
+        // , 600);
+        // var currentVal = parseInt($(".current-slide").text());
+        // var newVal = currentVal + 1;
+        // $(".current-slide").text(newVal);
+        // event.preventDefault();
+        // });
 
-        leftBtn.addEventListener("click", function(event) {
-          // $('.homepage-products-carousel').animate({scrollLeft: $('.homepage-products').prev().position().left}, 500);
-        const content = document.querySelector('.homepage-products-carousel');
-        content.scrollLeft -= 300;
-        event.preventDefault();
-        });
+        // leftBtn.addEventListener("click", function(event) {
+        //   // $('.homepage-products-carousel').animate({scrollLeft: $('.homepage-products').prev().position().left}, 500);
+        // const content = document.querySelector('.homepage-products-carousel');
+        // content.scrollLeft = content.scrollLeft - window_width;
+        // rightBtn.style.display = "block";
+        // console.log("Slider done");
+        // setTimeout(function(){
+        //   if(checkVisibilityofFirst()) {
+        //     leftBtn.style.display = "none";
+        //   }
+        // }
+        // , 600);
+        // var currentVal = parseInt($(".current-slide").text());
+        // var newVal = currentVal - 1;
+        // $(".current-slide").text(newVal);
+        // event.preventDefault();
+        // });
+
       </script>
       <!-- 19-08-2021 Commit Ends -->
 
